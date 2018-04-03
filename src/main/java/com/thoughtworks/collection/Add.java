@@ -10,35 +10,27 @@ import java.util.stream.IntStream;
 
 public class Add {
     public int getSumOfEvens(int leftBorder, int rightBorder) {
-        int startNumber = leftBorder;
-        int endNumber = rightBorder;
-        int result = 0;
-        if (rightBorder < leftBorder) {
-            startNumber = rightBorder;
-            endNumber = leftBorder;
-        }
-        for (int i = startNumber; i <= endNumber; i++) {
+        int bigNumber = Math.max(leftBorder, rightBorder);
+        int smallNumber = Math.min(leftBorder, rightBorder);
+        int sum = 0;
+        for (int i = smallNumber; i <= bigNumber; i++) {
             if (i % 2 == 0) {
-                result += i;
+                sum += i;
             }
         }
-        return result;
+        return sum;
     }
 
     public int getSumOfOdds(int leftBorder, int rightBorder) {
-        int startNumber = leftBorder;
-        int endNumber = rightBorder;
-        int result = 0;
-        if (rightBorder < leftBorder) {
-            startNumber = rightBorder;
-            endNumber = leftBorder;
-        }
-        for (int i = startNumber; i <= endNumber; i++) {
+        int bigNumber = Math.max(leftBorder, rightBorder);
+        int smallNumber = Math.min(leftBorder, rightBorder);
+        int sum = 0;
+        for (int i = smallNumber; i <= bigNumber; i++) {
             if (i % 2 != 0) {
-                result += i;
+                sum += i;
             }
         }
-        return result;
+        return sum;
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
