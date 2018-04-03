@@ -55,7 +55,7 @@ public class CollectionOperator {
 
     public List<Integer> addUncommonElement(Integer[] firstArray, Integer[] secondArray) {
         List result = new ArrayList();
-        result.addAll(Arrays.asList(firstArray));  //直接Arrays.asList(firstArray)后添加notContain无法转换
+        result.addAll(Arrays.asList(firstArray));  //直接Arrays.asList(firstArray)后添加notContain无法转换,由于aslist后的list长度不可变
         List notContain = Arrays.stream(secondArray)
                 .filter(item -> !(Arrays.asList(firstArray).contains(item)))
                 .collect(Collectors.toList());
