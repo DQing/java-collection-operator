@@ -1,7 +1,5 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 import java.text.DecimalFormat;
 import java.util.Collections;
 import java.util.List;
@@ -74,7 +72,6 @@ public class Reduce {
         return arrayList != null ? arrayList.hashCode() : 0;
     }
 
-    //实现接口SingleLink，然后再此函数内使用
     public Double getMedianInLinkList(SingleLink singleLink) {
         for (int i = 0; i < arrayList.size(); i++) {
             singleLink.addTailPointer(arrayList.get(i));
